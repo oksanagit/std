@@ -1,14 +1,14 @@
 
 file {
-	name="/home/oxygen4/MOONEY/epics/synApps/support/std/stdApp/op/adl/async_pid_control.adl"
-	version=030103
+	name="/home/epics/devel/std-3-4-1/stdApp/op/adl/async_pid_control.adl"
+	version=030109
 }
 display {
 	object {
-		x=903
-		y=580
+		x=497
+		y=160
 		width=330
-		height=220
+		height=245
 	}
 	clr=14
 	bclr=4
@@ -89,20 +89,8 @@ display {
 }
 text {
 	object {
-		x=30
-		y=2
-		width=240
-		height=25
-	}
-	"basic attribute" {
-		clr=54
-	}
-	textix="$(TITLE)"
-}
-text {
-	object {
 		x=13
-		y=30
+		y=60
 		width=110
 		height=20
 	}
@@ -114,7 +102,7 @@ text {
 "text entry" {
 	object {
 		x=128
-		y=30
+		y=60
 		width=160
 		height=20
 	}
@@ -130,7 +118,7 @@ text {
 text {
 	object {
 		x=20
-		y=111
+		y=141
 		width=100
 		height=20
 	}
@@ -143,7 +131,7 @@ text {
 "text entry" {
 	object {
 		x=20
-		y=133
+		y=163
 		width=100
 		height=20
 	}
@@ -158,7 +146,7 @@ text {
 text {
 	object {
 		x=20
-		y=164
+		y=194
 		width=100
 		height=20
 	}
@@ -171,7 +159,7 @@ text {
 menu {
 	object {
 		x=20
-		y=185
+		y=215
 		width=100
 		height=20
 	}
@@ -184,7 +172,7 @@ menu {
 text {
 	object {
 		x=13
-		y=80
+		y=110
 		width=110
 		height=20
 	}
@@ -196,7 +184,7 @@ text {
 "text entry" {
 	object {
 		x=128
-		y=80
+		y=110
 		width=160
 		height=20
 	}
@@ -212,7 +200,7 @@ text {
 "related display" {
 	object {
 		x=280
-		y=185
+		y=215
 		width=40
 		height=20
 	}
@@ -229,7 +217,7 @@ text {
 	display[2] {
 		label="PID parameters"
 		name="pid_parameters.adl"
-		args="P=$(P), PID=$(PID)"
+		args="P=$(P), PID=$(PID), TITLE=$(TITLE)"
 	}
 	display[3] {
 		label="PID limits"
@@ -253,7 +241,7 @@ text {
 text {
 	object {
 		x=13
-		y=55
+		y=85
 		width=110
 		height=20
 	}
@@ -265,7 +253,7 @@ text {
 "text entry" {
 	object {
 		x=128
-		y=55
+		y=85
 		width=160
 		height=20
 	}
@@ -281,7 +269,7 @@ text {
 "text entry" {
 	object {
 		x=295
-		y=30
+		y=60
 		width=25
 		height=20
 	}
@@ -296,7 +284,7 @@ text {
 text {
 	object {
 		x=150
-		y=111
+		y=141
 		width=110
 		height=20
 	}
@@ -309,7 +297,7 @@ text {
 "text update" {
 	object {
 		x=150
-		y=133
+		y=163
 		width=110
 		height=20
 	}
@@ -325,7 +313,7 @@ text {
 text {
 	object {
 		x=153
-		y=164
+		y=194
 		width=110
 		height=20
 	}
@@ -337,7 +325,7 @@ text {
 menu {
 	object {
 		x=150
-		y=185
+		y=215
 		width=110
 		height=20
 	}
@@ -346,4 +334,30 @@ menu {
 		clr=14
 		bclr=51
 	}
+}
+text {
+	object {
+		x=0
+		y=5
+		width=330
+		height=25
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="$(TITLE)"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=0
+		y=35
+		width=330
+		height=20
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="$(P)$(PID)"
+	align="horiz. centered"
 }
